@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&family=Sansita+Swashed:wght@300..900&display=swap');
+
+:root{
+    --background-color: #12372A;
+    --secondary-color: #FBFADA;
+    --highlight-color: #ADBC9F;
+    --alternative-color: #FFFFFF;
+    --hover-color: #242639;
+    --font-main: 'Lexend Zetta', sans-serif;
+    --font-secondary: 'Sansita Swashed', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 20px;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-main);
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    display: inline-flex;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+header a:hover {
+    color: var(--hover-color);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: var(--font-secondary);
+    gap: 64px;
+}
+
+li {
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 32px;
+    right: 20px;
+    font-size: 20px;
+    color: var(--secondary-color);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.split-left {
+    font-size: 54px;
+    font-weight: bold;
+    padding-left: 2%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: var(--font-main);
+    color: var(--highlight-color);
+}
+
+h2 {
+    font-size: 144px;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    color: var(--secondary-color);
+}
+
+h5 {
+    display: none;
+    color: var(--alternative-color);
+    font-size: 20px;
+    font-weight: normal;
+    font-family: var(--font-main);
+}
+
+h5 span {
+    color: var(--alternative-color);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 0;
+    padding: 8px;
+    color: var(--highlight-color);
+}
+
+.container-burger {
+    display: flex;
+    justify-content: center;
+    padding: auto;
+}
+
+.burger-image {
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin-left: 48px auto 0;
+}
+
+.burger-container {
+    display: flex;
+    justify-content: left;
+    gap: 16px;
+    padding-left: 8%;
+    margin-top: 0;
+}
+
+.burger-container img {
+    max-width: 120px;
+    height: auto;
+}
+
+footer {
+    margin: 3% 12%;
+    text-align: center;  
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Mobile devices (screen width less than 768px) */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 32px;
+    }
+    .split-left {
+        font-size: 32px;
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        top: 14%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        z-index: 1;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        background-color: #0b7765;
+    }
+
+    .hamburger {
+        display: flex;
+        right: 58px;
+        top: 56px;
+        font-size: 32px;
+    }
+
+    ul.show {
+        display: flex;
+    }
+
+    .container {
+        display: block;
+        margin-top: 48px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 72px;
+    }
+    
+    p {
+        font-size: 24px;
+    }
+
+    h5 {
+        display: block;
+        margin-top: -28px;
+    }
+
+    .container {
+        white-space: wrap;
+    }
+
+    .container-burger {
+        display: block;
+    }
+
+    .burger-container {
+        padding-left: 0;
+    }
+
+    .burger-container img{
+        padding: 0;
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        display: none;
+    }
+}
